@@ -10,6 +10,8 @@ install:
   - mysql -e "create table mt.mt_blog ( blog_id int(11) not null auto_increment, primary key (blog_id) );"
   - mysql -e "insert into mt.mt_blog ( blog_id ) values ( 1 );"
 
+  - phpenv config-add myconfig.ini
+
 script:
   - php test.php
 

@@ -1,0 +1,11 @@
+language: php
+
+services:
+  - memcached
+
+install:
+  - mysql -e "create database mt character set utf8;"
+
+script:
+  - php test.php
+

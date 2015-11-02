@@ -9,12 +9,12 @@ ADOdb_Active_Record::SetDatabaseAdapter($db);
 
 require_once('blog.php');
 $blog = new Blog;
-$blog->Load(1);
+$blog->Load('blog_id = 1');
 
 $mc = new Memcache;
 $mc->connect('localhost', 11211) or die (1);
 $mc->set('blog_id:1', $blog);
 $cache = $mc->get('blog_id:1');
 
-var_dump($cache);
+echo $blog->blog_id . "\n";
 

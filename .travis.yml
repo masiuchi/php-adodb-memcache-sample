@@ -5,6 +5,8 @@ services:
 
 install:
   - mysql -e "create database mt character set utf8;"
+  - mysql -e "create table mt.mt_blog ( blog_id int(11) not null auto_increment, primary key (blog_id) );"
+  - mysql -e "insert into mt.mt_blog ( blog_id ) values ( 1 );"
 
 script:
   - php test.php

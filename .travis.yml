@@ -3,10 +3,6 @@ language: php
 services:
   - memcached
 
-addons:
-  apt_packages:
-    - php5-memcache
-
 sudo: false
 
 install:

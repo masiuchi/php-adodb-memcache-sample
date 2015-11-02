@@ -16,5 +16,5 @@ $mc->connect('localhost', 11211) or die (1);
 $mc->set('blog_id:1', $blog);
 $cache = $mc->get('blog_id:1');
 
-echo $blog->blog_id . "\n";
+echo $cache->blog_id . "\n";
 

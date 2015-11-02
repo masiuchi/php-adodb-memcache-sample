@@ -1,7 +1,7 @@
 language: php
-
 services:
   - memcached
+sudo: false
 
 install:
   - mysql -e "create database mt character set utf8;"

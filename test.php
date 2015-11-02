@@ -4,7 +4,7 @@ require_once('adodb5/adodb.inc.php');
 require_once('adodb5/adodb-active-record.inc.php');
 require_once('adodb5/adodb-exceptions.inc.php');
 
-$db = NewADOConnection('mysql://root@localhost/mt');
+$db = NewADOConnection('mysqli://root@localhost/mt');
 ADOdb_Active_Record::SetDatabaseAdapter($db);
 
 require_once('blog.php');
